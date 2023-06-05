@@ -1,4 +1,8 @@
 import Title from "./componentesOne/Title";
+import One from "./componentesOne/One";
+import { Three } from "./componentesOne/three";
+import Two from "./componentesOne/Two";
+import Last from "./componentesOne/Last";
 
 const PrimerEjercicio = () => {
   const curso = 'Curso para fabian y jorge';
@@ -11,19 +15,10 @@ const PrimerEjercicio = () => {
   return (
     <div>
       <Title curso={curso} />
-      {/* Hacer lo que les mostre pero con lo siguiente */}
-      <p>
-        {numberOne} - {one}
-      </p>
-      <p>
-        {numberTwo} - {two}
-      </p>
-      <p>
-        {numberThree} - {three}
-      </p>
-      <h3>
-        la suma es : {numberOne + numberTwo + numberThree}
-      </h3>
+      <One one={one} numberOne={numberOne} />
+      <Two two={two} numberTwo={numberTwo} />
+      <Three three={three} numberThree={numberThree} />
+      <Last one={numberOne} two={numberTwo} three={numberThree} />
     </div>
   );
 };
